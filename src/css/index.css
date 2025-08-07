@@ -1,0 +1,6 @@
+// * universal selector, applies the styles to all elements in the html document
+*{
+ box-sizing: border-box; // Width/height of an element when calculated include content + padding + border
+ margin:0;
+ padding:0;
+}
