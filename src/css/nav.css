@@ -6,6 +6,12 @@
     justify-content: space-between;
     align-items: center;
 }
+.nav-container.light{
+    background-color: white;
+}
+.nav-container.dark{
+    background-color: black;
+}
 .nav-left{
     display:flex;
     align-items: center;
@@ -27,7 +33,7 @@
     list-style: none;
     padding: 20px;
     gap: 10px;
-    color: green;
+    color: #ebdf09;
 }
 .nav-links li{
     cursor: pointer;
@@ -40,4 +46,33 @@
     border: 1px solid black;
     background-color:black;
     border-radius:10px;
+}
+.nav-links li:nth-child(4).dark{
+    background-color: white;
+    color: black;
+}
+.menu{
+    display:none;
+}
+@media (max-width: 768px){
+    .nav-links{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #1a241c;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    .nav-links.active{
+        display: flex;
+    }
+    .menu{
+        display:block;
+        width: 30px;
+        margin-right: 20px;
+    }
 }

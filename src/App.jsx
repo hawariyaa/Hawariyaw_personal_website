@@ -3,11 +3,11 @@ import './css/App.css'
 import Nav from './components/nav.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState('light')
 
   return (
     <>
-      <Nav />
+      <Nav theme={theme} setTheme={setTheme} />
     </>
   )
 }

@@ -5,26 +5,47 @@ import profile from '../assets/profile.jpg'
 import logo from '../assets/logoha.png'
 import day from '../assets/day.png'
 import night from '../assets/night.png'
-
-const Nav = () => {
-
+import menuiconb from '../assets/menuicon-b.png'
+import menuiconw from '../assets/menuicon-w.png'
+import closeicon from '../assets/closeicon.png'
+const Nav = ({theme, setTheme}) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const toggle = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+  const openMenu = () => {
+     setMenuOpen(!menuOpen)
+  }
+  
   //we can only use hooks inside a function component like this one, hooks can't be nested in loops, conditions, or nested functions
   // hooks are called in the exact same order on every render
   return (
-    <nav className="nav-container">
+    // Syntax	Used in	Purpose {variable}	JSX / JSX expressions	Inserts JavaScript directly into JSX
+    // ${variable}	Template literals	Inserts values into strings using backticks ` `
+    <nav className={`nav-container ${theme}`}>
        <div className="nav-left">
           <img src={profile} alt="profile logo" className="logoimg" />
           <img src={logo} alt="logo"/>
        </div>
        <div>
           <ul className="nav-links">
-            <li>Aboutme</li>
+            <li>About-me</li>
             <li>Skills</li>
             <li>Projects</li>
-            <li >Get in touch</li>
-            <li><img src={night} alt="night mode"/></li>
+            <li className={`${theme}`}>Get in touch</li>
+            <li><img src={theme  === 'light' ? night : day} alt="night mode" onClick={toggle}/></li>          
           </ul>
        </div>
+       <img src={theme === 'light'
+          ? menuOpen
+            ? closeicon
+            : menuiconb
+          : menuOpen
+            ? closeicon
+            : menuiconw
+       }
+       className="menu"
+       onClick={openMenu}/>
    </nav>
   )
 }
