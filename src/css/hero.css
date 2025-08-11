@@ -1,0 +1,25 @@
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.hero-container.dark{
+    flex-direction: row-reverse;
+    background-color: black;
+}
+.hero-left{
+    padding: 0 0 3rem 3rem;
+}
+.hero-right{
+   padding: 0 5rem 0 0;
+}
+.hero-container.dark img{
+    width: 24rem;
+    padding: 0 0 0 11rem;
+}
+.hero-container.dark h1,
+.hero-container.dark h2 {
+    color: white;
+    padding: 0 7rem 0 0;
+}

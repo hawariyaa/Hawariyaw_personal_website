@@ -8,6 +8,7 @@ import night from '../assets/night.png'
 import menuiconb from '../assets/menuicon-b.png'
 import menuiconw from '../assets/menuicon-w.png'
 import closeicon from '../assets/closeicon.png'
+
 const Nav = ({theme, setTheme}) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggle = () => {
@@ -27,8 +28,8 @@ const Nav = ({theme, setTheme}) => {
           <img src={profile} alt="profile logo" className="logoimg" />
           <img src={logo} alt="logo"/>
        </div>
-       <div>
-          <ul className="nav-links">
+       <div className={`nav-right  ${menuOpen ? 'open' : ''}`}>
+          <ul className={`nav-links ${theme}`}>
             <li>About-me</li>
             <li>Skills</li>
             <li>Projects</li>
