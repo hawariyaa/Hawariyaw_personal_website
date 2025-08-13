@@ -1,0 +1,12 @@
+.About-container{
+    display:flex;
+    gap: 3em;
+}
+.About-left img{
+    width: 25em;
+    margin-left:6em;
+    border-radius:85px;
+}
+.About-right{
+    margin-top: 7em;
+}

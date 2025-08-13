@@ -6,9 +6,11 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 
 function Hero({ theme, setTheme }) {
+//React will put the DOM element into heroRef.current when the component mounts.
   const heroRef = useRef()
 
   useGSAP(() => {
+//gsap.context is a GSAP utility that: Scopes all your GSAP selectors ('#hero', 'h1', '.letter') so they only target elements inside heroRef.current.
     const ctx = gsap.context(() => {
       // Hero image animation
       gsap.from('#hero', {
@@ -33,16 +35,17 @@ function Hero({ theme, setTheme }) {
           opacity: 1,
           duration: 1,
           ease: 'power1.out',
-          stagger: 0.05,
-          repeat: -1,
-          repeatDelay: 0.7
+          stagger: 0.2,
+          repeat: 1,
         }
       )
     }, heroRef)
 
     return () => ctx.revert()
   }, [theme])
-
+// This runs when the component unmounts or when theme changes (because theme is in the dependency array
+// ctx.revert() cleans up:Removes any animations that were applied.Restores the DOM elements to their original state (before GSAP touched them).
+// so when switching to dark mode all the gsap will be cleaned,and then the gsap will run again
   return (
     <div className={`hero-container ${theme}`} ref={heroRef}>
       <div className="hero-left">
