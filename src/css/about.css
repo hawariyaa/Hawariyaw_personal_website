@@ -10,3 +10,9 @@
 .About-right{
     margin-top: 7em;
 }
+.About-right h1{
+    color:#1b2119
+}
+.About-right h1 span{
+    color:green;
+}
