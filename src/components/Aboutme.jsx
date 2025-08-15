@@ -7,7 +7,7 @@ import '../css/about.css';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-function Aboutme() {
+function Aboutme({theme, setTheme}) {
   const rightRef = useRef(null);
 
   useGSAP(() => {
@@ -48,7 +48,7 @@ function Aboutme() {
   }, { scope: rightRef });
 
   return (
-    <div className="About-container">
+    <div className={`About-container ${theme}`}>
       <div className="About-left">
         <img src={About} alt="About image" />
       </div>

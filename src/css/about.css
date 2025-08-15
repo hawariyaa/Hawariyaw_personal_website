@@ -2,6 +2,10 @@
     display:flex;
     gap: 3em;
 }
+.About-container.dark{
+    background-color: black;
+    color: white;
+}
 .About-left img{
     width: 25em;
     margin-left:6em;

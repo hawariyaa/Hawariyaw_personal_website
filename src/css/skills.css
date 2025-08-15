@@ -1,0 +1,32 @@
+.icons{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    gap:1rem;
+    margin-top:3rem;
+}
+.icons img{
+    width: 5rem;
+    border-radius: 50%;
+    
+}
+.line1{
+    width: 50rem;
+    height: 1rem;
+    background-color: black;
+    margin-bottom:14rem;
+    margin-left:auto;
+}
+.line2{
+    width: 40rem;
+    height: 1rem;
+    background-color: black;
+    margin-bottom:12rem;
+}
+.line3{
+    width: 50rem;
+    height: 1rem;
+    background-color: black;
+    margin-left:auto;
+    margin-bottom:3rem;
+}
