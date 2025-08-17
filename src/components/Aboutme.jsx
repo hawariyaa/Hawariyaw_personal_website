@@ -25,7 +25,6 @@ function Aboutme({theme, setTheme}) {
       scrollTrigger: {
         trigger: rightRef.current,     // not the spans
         start: 'top center',
-        end: 'top top',
         delay:2,
         toggleActions: 'play none none reverse'
       },

@@ -4,6 +4,8 @@ import Nav from './components/nav.jsx'
 import Hero from './components/hero.jsx'
 import Aboutme from './components/Aboutme.jsx'
 import Skills from './components/Skills.jsx'
+import Projects from './components/Projects.jsx'
+import Contact from './components/Contact.jsx'
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -14,6 +16,8 @@ function App() {
       <Hero theme={theme} setTheme={setTheme}/>
       <Aboutme theme={theme} setTheme={setTheme}/>
       <Skills  />
+      <Projects />
+      <Contact />
     </>
   )
 }

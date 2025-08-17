@@ -1,0 +1,22 @@
+.contact-container{
+    
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin: 5em 0 5em 3em;
+}
+.contact label{
+    margin: 1em 0 1em 0;
+}
+.contact input{
+    width: 20em;
+    padding:1em;
+    border-radius: 5px;
+}
+.contact textarea{
+    width: 50em;
+    height: 20em;
+    padding: 1em;
+    border-radius: 5px;
+}

@@ -215,7 +215,7 @@ function Skills() {
     ease: 'bounce.out'
   })
   .to('.img7', {
-    x: -350,
+    x: -550,
     rotation: 1080,
     duration:4,
     ease: 'power1.inOut'

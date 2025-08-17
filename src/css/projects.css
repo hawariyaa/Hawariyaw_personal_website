@@ -1,0 +1,29 @@
+.projects-container h1{
+    margin-left: 3rem;
+}
+.projects{
+    display: flex;
+    flex-wrap:wrap;
+}
+.each-project{
+    width: 40%;
+    padding: 2em;
+    border: 1px solid #42b6f5;
+    border-radius: 20px;
+    margin: 2em;
+    cursor: pointer;
+    transition: all 1s ease-in-out; 
+}
+.each-project img{
+    width: 33em;
+    border-radius: 20px;
+}
+.each-project:hover{
+    transform:scale(1.2);
+    transform:translate(30px, -30px);
+    box-shadow:  
+    0 0 10px #00f,    
+    0 0 20px #00f,    
+    0 0 40px #00f;    
+}
+}
