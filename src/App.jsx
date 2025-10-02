@@ -8,7 +8,7 @@ import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 
 function App() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   return (
     <>

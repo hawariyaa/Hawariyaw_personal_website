@@ -4,12 +4,15 @@ import herow from '../assets/hero-w.png'
 import herob from '../assets/hero-b.jpg'
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import { SplitText } from 'gsap/all'
+import cv from '../assets/Hawariyaw_Paulos_CV.pdf'
 
 function Hero({ theme, setTheme }) {
 //React will put the DOM element into heroRef.current when the component mounts.
   const heroRef = useRef()
 
   useGSAP(() => {
+    const heroSplit = new SplitText('.h2', {type: 'chars, words'});
 //gsap.context is a GSAP utility that: Scopes all your GSAP selectors ('#hero', 'h1', '.letter') so they only target elements inside heroRef.current.
     const ctx = gsap.context(() => {
       // Hero image animation
@@ -28,17 +31,21 @@ function Hero({ theme, setTheme }) {
 
       // H2 letter stagger animation
       gsap.fromTo(
-        '.letter',
+        heroSplit.chars,
         { y: 250, opacity: 0 }, // start state
         {
           y: 0,
           opacity: 1,
-          duration: 1,
+          duration: 3,
           ease: 'power1.out',
           stagger: 0.2,
-          repeat: 1,
         }
       )
+      gsap.from('.btn', {
+        opacity:0,
+        delay:3,
+        duration:1,
+      })
     }, heroRef)
 
     return () => ctx.revert()
@@ -50,13 +57,8 @@ function Hero({ theme, setTheme }) {
     <div className={`hero-container ${theme}`} ref={heroRef}>
       <div className="hero-left">
         <h1 id='h1'>Hi, I'm Hawariyaw Paulos</h1>
-        <h2 id='h2'>
-          {"A Full Stack Software Engineer".split("").map((char, i) => (
-            <span key={i} className='letter'>
-              {char === " " ? "\u00A0" : char}
-            </span>
-          ))}
-        </h2>
+        <h2 className='h2'>A Full Stack Software Engineer</h2>
+        <a href={cv} download className='btn'>Download CV</a>
       </div>
       <div className="hero-right">
         <img src={theme === 'light' ? herow : herob} alt="hero" id="hero" />
