@@ -1,9 +1,27 @@
+.skills{
+    overflow-x:hidden;
+}
+skills.light{
+    background-color:white;
+    color:black;
+}
+.skills.dark{
+    background-color:black;
+    color:white;
+}
+.skills.dark .line1,
+.skills.dark .line2,
+.skills.dark .line3{
+    background-color:white;
+}
+.skills.dark .line3{
+    border: 1px solid black;
+}
 .icons{
     display:flex;
     justify-content: flex-end;
     margin-right: 5rem;
     gap:1rem;
-    margin-top:3rem;
 }
 .icons img{
     width: 5rem;
@@ -28,5 +46,4 @@
     height: 1rem;
     background-color: black;
     margin-left:auto;
-    margin-bottom:3rem;
 }

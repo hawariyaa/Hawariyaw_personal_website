@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import '../css/contact.css'
 import emailjs from '@emailjs/browser'
 // npm i @emailjs/browser
-function Contact() {
+function Contact({theme, setTheme}) {
     const form = useRef()
     const sendEmail = (e) =>{
         e.preventDefault();
@@ -17,7 +17,7 @@ function Contact() {
     )
     }
   return (
-    <div className="contact-container">
+    <div className={`contact-container ${theme}`} id='contact'>
         <form ref={form} onSubmit={sendEmail} className="contact">
             <h1>Get in touch!</h1>
             <label>You're name</label>

@@ -1,10 +1,18 @@
 .contact-container{
-    
+    overflow-x:hidden;
+}
+.contact-container.light{
+    background-color:white;
+    color:black;
+}
+.contact-container.dark{
+    background-color:black;
+    color:white;
 }
 .contact{
     display: flex;
     flex-direction: column;
-    margin: 5em 0 5em 3em;
+    padding: 0em 0 0em 3em;
 }
 .contact label{
     margin: 1em 0 1em 0;

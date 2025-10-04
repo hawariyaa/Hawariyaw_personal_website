@@ -23,6 +23,7 @@ const Nav = ({theme, setTheme}) => {
   return (
     // Syntax	Used in	Purpose {variable}	JSX / JSX expressions	Inserts JavaScript directly into JSX
     // ${variable}	Template literals	Inserts values into strings using backticks ` `
+    <>
     <nav className={`nav-container ${theme}`}>
        <div className="nav-left">
           <img src={profile} alt="profile logo" className="logoimg" />
@@ -34,10 +35,10 @@ const Nav = ({theme, setTheme}) => {
        </div>
        <div className={`nav-right  ${menuOpen ? 'open' : ''}`}>
           <ul className={`nav-links ${theme}`}>
-            <li>About-me</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li className={`${theme}`}>Get in touch</li>
+            <li><a href="#aboutme">About-me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li className={`${theme}`}><a href="#contact">Get in touch</a></li>
             <li><img src={theme  === 'light' ? night : day} alt="night mode" onClick={toggle}/></li>          
           </ul>
        </div>
@@ -52,6 +53,7 @@ const Nav = ({theme, setTheme}) => {
        className="menu"
        onClick={openMenu}/>
    </nav>
+   </>
   )
 }
 

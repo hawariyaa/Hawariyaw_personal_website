@@ -1,5 +1,11 @@
+.projects-container{
+    overflow-x:hidden;
+}
 .projects-container h1{
     margin-left: 3rem;
+}
+.projects-container.dark{
+    background-color:black;
 }
 .projects{
     display: flex;

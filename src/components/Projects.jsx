@@ -2,9 +2,9 @@ import React from 'react'
 import '../css/projects.css'
 import kiray from '../assets/kiray.png'
 
-function Projects() {
+function Projects({theme, setTheme}) {
   return (
-    <div className="projects-container">
+    <div className={`projects-container ${theme}`} id='projects'>
         <h1>Projects</h1>
         <div className="projects">
             <div className="each-project">

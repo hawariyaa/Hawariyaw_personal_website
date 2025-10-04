@@ -54,7 +54,7 @@ function Hero({ theme, setTheme }) {
 // ctx.revert() cleans up:Removes any animations that were applied.Restores the DOM elements to their original state (before GSAP touched them).
 // so when switching to dark mode all the gsap will be cleaned,and then the gsap will run again
   return (
-    <div className={`hero-container ${theme}`} ref={heroRef}>
+    <div className={`hero-container ${theme}`} ref={heroRef} id='hero'>
       <div className="hero-left">
         <h1 id='h1'>Hi, I'm Hawariyaw Paulos</h1>
         <h2 className='h2'>A Full Stack Software Engineer</h2>

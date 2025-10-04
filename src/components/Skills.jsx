@@ -12,7 +12,7 @@ import {useGSAP} from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-function Skills() {
+function Skills({theme, setTheme}) {
   useGSAP(() => {
   const t1 = gsap.timeline({
     scrollTrigger: {
@@ -215,7 +215,7 @@ function Skills() {
     ease: 'bounce.out'
   })
   .to('.img7', {
-    x: -550,
+    x: -750,
     rotation: 1080,
     duration:4,
     ease: 'power1.inOut'
@@ -226,8 +226,8 @@ function Skills() {
         
     
   return (
-    <div>
-         <div className="icons">
+    <div className={`skills ${theme === 'dark' ? 'dark' : 'light'}`} id='skills'>
+         <div className='icons'>
             <img src={sql} alt="sql" className="img1"/>
             <img src={css3} alt="css icon" className="img2"/>
             <img src={html5} alt="html icon" className="img3"/>

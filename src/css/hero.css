@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    overflow-x:hidden;
 }
 .hero-container.dark{
     flex-direction: row-reverse;
@@ -33,4 +34,20 @@
     text-decoration:none;
     font-family: "Poppins", sans-serif;
     font-style:normal;
+}
+@media(max-width:1200px){
+    .hero-container.dark img{
+    width: 20rem;
+    padding: 0 0 0 6rem;
+}
+    .hero-left h1,
+    .hero-left h2{
+        font-size:1.3em;
+        padding:0;
+    }
+    .hero-container.dark h1,
+    .hero-container.dark h2 {
+    color: white;
+    padding: 0 0 0 0;
+}
 }

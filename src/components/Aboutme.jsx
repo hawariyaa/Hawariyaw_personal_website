@@ -47,7 +47,7 @@ function Aboutme({theme, setTheme}) {
   }, { scope: rightRef });
 
   return (
-    <div className={`About-container ${theme}`}>
+    <div className={`About-container ${theme}`} id='aboutme'>
       <div className="About-left">
         <img src={About} alt="About image" />
       </div>
