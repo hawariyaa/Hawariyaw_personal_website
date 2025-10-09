@@ -16,8 +16,12 @@
     margin-top: 7em;
 }
 .About-right h1{
-    color:#1b2119
+    color:#b1de2a;
+}
+.About-right p{
+    font-family: "Poppins", sans-serif;
 }
 .About-right h1 span{
     color:green;
 }
+

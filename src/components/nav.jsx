@@ -30,8 +30,8 @@ const Nav = ({theme, setTheme}) => {
           <img src={logo} alt="logo"/>
        </div>
        <div className={`infos ${theme}`}>
-         <i class="fa-brands fa-github"></i>
-         <i class="fa-brands fa-linkedin"></i>
+         <a href="https://www.linkedin.com/in/hawariaw-paulos-116569292/" target='_blank'><i class="fa-brands fa-github"></i></a>
+         <a href="https://github.com/hawariyaa" target='_blank'><i class="fa-brands fa-linkedin"></i></a>
        </div>
        <div className={`nav-right  ${menuOpen ? 'open' : ''}`}>
           <ul className={`nav-links ${theme}`}>

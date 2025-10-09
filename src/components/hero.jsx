@@ -41,8 +41,10 @@ function Hero({ theme, setTheme }) {
           stagger: 0.2,
         }
       )
-      gsap.from('.btn', {
-        opacity:0,
+      gsap.fromTo('.btn', 
+        {opacity:0},
+        {
+        opacity:1,
         delay:3,
         duration:1,
       })

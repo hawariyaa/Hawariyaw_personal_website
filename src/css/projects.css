@@ -1,35 +1,54 @@
-.projects-container{
+.banner{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+    display:flex;
+    padding: 8px;
+
+}
+.banner h2{
+    margin-left:9vw;
+    margin-top:8vw;
+}
+.banner.dark{
+    background-color:black;
+    color: white;
     overflow-x:hidden;
 }
-.projects-container h1{
-    margin-left: 3rem;
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 25%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 60s linear infinite;
+    z-index: 2;
 }
-.projects-container.dark{
-    background-color:black;
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
 }
-.projects{
-    display: flex;
-    flex-wrap:wrap;
+.banner .slider:hover {
+  animation-play-state: paused;
 }
-.each-project{
-    width: 40%;
-    padding: 2em;
-    border: 1px solid #42b6f5;
-    border-radius: 20px;
-    margin: 2em;
-    cursor: pointer;
-    transition: all 1s ease-in-out; 
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(clamp(120px,20vw, 500px));
+    cursor:pointer;
 }
-.each-project img{
-    width: 33em;
-    border-radius: 20px;
-}
-.each-project:hover{
-    transform:scale(1.2);
-    transform:translate(30px, -30px);
-    box-shadow:  
-    0 0 10px #00f,    
-    0 0 20px #00f,    
-    0 0 40px #00f;    
-}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -2,39 +2,54 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
-    overflow-x:hidden;
+    padding: 2vw;
+    padding-top:8vw;
+    opacity:1;
+    
 }
 .hero-container.dark{
     flex-direction: row-reverse;
     background-color: black;
 }
 .hero-left{
-    padding: 0 0 3rem 3rem;
+    padding: 0 0 3vw 3vw;
 }
 .hero-right{
-   padding: 0 5rem 0 0;
+   padding: 0 5vw 0 0;
+}
+.hero-right img{
+    border-radius:20px;
 }
 .hero-container.dark img{
-    width: 24rem;
-    padding: 0 0 0 11rem;
+    width: 30vw;
+    margin: 0 0 0 11vw;
 }
 .hero-container.dark h1,
 .hero-container.dark h2 {
     color: white;
-    padding: 0 7rem 0 0;
+    padding: 0 11vw 0 0;
+    font-size:clamp(8px,2vw,3em);
 }
-.btn{
-    display:inline-block;
-    padding:10px;
-    margin-top:10px;
-    background-color:red;
-    color:white;
-    border-radius:8px;
-    text-decoration:none;
-    font-family: "Poppins", sans-serif;
-    font-style:normal;
+.btn {
+  display: inline-block;
+  padding: 1vw;
+  margin-top: 1vw;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(10px, 1.2vw, 3em);
+  transition: all 1s ease;
+  opacity:1;
 }
+
+.btn:hover {
+  transform: translate(3px, -5px);
+  box-shadow: 0 0 15px 3px rgba(230, 57, 70, 1);
+}
+
+/*
 @media(max-width:1200px){
     .hero-container.dark img{
     width: 20rem;
@@ -48,6 +63,39 @@
     .hero-container.dark h1,
     .hero-container.dark h2 {
     color: white;
-    padding: 0 0 0 0;
+    padding: 0 4vw 0 0;
+}
+}
+
+@media(max-width:1130px){
+    .hero-container.dark img{
+    width: 20rem;
+    padding: 0 0 0 6rem;
+}
+    .hero-left h1,
+    .hero-left h2{
+        font-size:1.3em;
+        padding:0;
+    }
+    .hero-container.dark h1,
+    .hero-container.dark h2 {
+    color: white;
+    padding: 0 2em 0 0;
+}
+}
+@media(max-width:850px){
+    .hero-container.dark img{
+    width: 15rem;
+    padding: 0 0 0 6rem;
+}
+    .hero-left h1,
+    .hero-left h2{
+        font-size:1em;
+        padding:0;
+    }
+    .hero-container.dark h1,
+    .hero-container.dark h2 {
+    color: white;
+    padding: 0 2vw 0 0;
 }
 }

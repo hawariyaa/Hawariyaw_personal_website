@@ -1,5 +1,6 @@
 .contact-container{
     overflow-x:hidden;
+    padding: 80px;
 }
 .contact-container.light{
     background-color:white;
@@ -27,4 +28,24 @@
     height: 20em;
     padding: 1em;
     border-radius: 5px;
+}
+.contact button{
+    width: 12vw;
+    padding:1vw;
+    margin:1vw;
+    background-color:red;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-family: "Poppins", sans-serif;
+    font-style:normal;
+    font-size:clamp(10px,1.2vw,3em);
+    cursor: pointer;
+    transition: 1s;
+}
+.contact button:hover {
+  transform: translate(3px, -5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px 3px rgba(230, 57, 70, 1);
+  
 }

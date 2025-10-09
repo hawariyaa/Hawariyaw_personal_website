@@ -31,27 +31,17 @@ function Skills({theme, setTheme}) {
       ease: 'power1.inOut',
   })
   .to('.img1', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img1', {
-    x: 40,
-    rotation: 360,
+    x: -600,
+    rotation:-1080,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img1', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img1', {
-    x: 650,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
+  
   t1.to('.img2', {
       x:-260,        
       rotation: -360,
@@ -59,27 +49,17 @@ function Skills({theme, setTheme}) {
       ease: 'power1.inOut',
   })
   .to('.img2', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img2', {
-    x:-15,
-    rotation: 360,
+    x:-630,
+    rotation:-720,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img2', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img2', {
-    x: 470,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
+  
   t1.to('.img3', {
       x:-360,        
       rotation: -360,
@@ -87,27 +67,17 @@ function Skills({theme, setTheme}) {
       ease: 'power1.inOut',
   })
   .to('.img3', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img3', {
-    x:-75,
-    rotation: 360,
+    x:-650,
+    rotation:-720,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img3', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img3', {
-    x: 290,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
+  
   t1.to('.img4', {
       x:-460,        
       rotation: -720,
@@ -115,27 +85,17 @@ function Skills({theme, setTheme}) {
       ease: 'power1.inOut',
   })
   .to('.img4', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img4', {
-    x: -100,
-    rotation: 360,
+    x: -670,
+    rotation:-1080,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img4', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img4', {
-    x: 110,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
+ 
   t1.to('.img5', {
       x:-560,        
       rotation: -720,
@@ -143,55 +103,35 @@ function Skills({theme, setTheme}) {
       ease: 'power1.inOut',
   })
   .to('.img5', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img5', {
-    x: -330,
-    rotation: 360,
+    x: -680,
+    rotation:-1080,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img5', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img5', {
-    x: -70,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
+  
   t1.to('.img6', {
-      x:-660,        
+      x:-640,        
       rotation: -720,
       duration:3,
       ease: 'power1.inOut',
   })
   .to('.img6', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img6', {
-    x: -430,
-    rotation: 360,
+    x: -690,
+    rotation:-790,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img6', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img6', {
-    x: -250,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
+  
   t1.to('.img7', {
       x:-760,        
       rotation: -1080,
@@ -199,27 +139,16 @@ function Skills({theme, setTheme}) {
       ease: 'power1.inOut',
   })
   .to('.img7', {
-      y:240,        
+      y:334,        
       duration:1,
       ease: 'bounce.out',
   })
   .to('.img7', {
-    x: -530,
-    rotation: 360,
+    x: -700,
+    rotation:-720,
     duration:2,
     ease: 'power1.inOut'
   })
-  .to('.img7', {
-    y: 450,
-    duration:1,
-    ease: 'bounce.out'
-  })
-  .to('.img7', {
-    x: -750,
-    rotation: 1080,
-    duration:4,
-    ease: 'power1.inOut'
-  });
 }, []);
 
         
@@ -227,6 +156,7 @@ function Skills({theme, setTheme}) {
     
   return (
     <div className={`skills ${theme === 'dark' ? 'dark' : 'light'}`} id='skills'>
+         <h2>Skills</h2>
          <div className='icons'>
             <img src={sql} alt="sql" className="img1"/>
             <img src={css3} alt="css icon" className="img2"/>
@@ -238,7 +168,6 @@ function Skills({theme, setTheme}) {
         </div>
         <div className="line1"></div>
         <div className="line2"></div>
-        <div className="line3"></div>
     </div>
   )
 }

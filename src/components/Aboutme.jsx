@@ -53,9 +53,9 @@ function Aboutme({theme, setTheme}) {
       </div>
       <div className="About-right" ref={rightRef}>
         <h1>Ab<span>o</span>ut m<span>e</span></h1>
-        <p className="p">skna;kdnva;kdvna;kdslkdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-        <p className="p">alkdnva;ddddddddddddddddddddddddddddddd;aaaaaaaaaaaaaaaaaudddddddddddddddddddddddddddu</p>
-        <button className="p">Contact me</button>
+        <p className="p">Hi, I’m Hawi Paul, a Computer Engineering graduate and an aspiring software developer
+           passionate about building efficient and user-focused applications. I enjoy solving real-world problems 
+           through technology — from designing intuitive front-end interfaces with React to developing reliable back-end systems using Node.js and NestJS.</p>
       </div>
     </div>
   );

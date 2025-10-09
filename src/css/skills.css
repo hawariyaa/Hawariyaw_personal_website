@@ -1,6 +1,10 @@
 .skills{
     overflow-x:hidden;
 }
+.skills h2{
+
+    padding:4em 0 0 8em;
+}
 skills.light{
     background-color:white;
     color:black;
@@ -10,12 +14,9 @@ skills.light{
     color:white;
 }
 .skills.dark .line1,
-.skills.dark .line2,
-.skills.dark .line3{
+.skills.dark .line2
+{
     background-color:white;
-}
-.skills.dark .line3{
-    border: 1px solid black;
 }
 .icons{
     display:flex;
@@ -32,18 +33,13 @@ skills.light{
     width: 50rem;
     height: 1rem;
     background-color: black;
-    margin-bottom:14rem;
+    margin-bottom:20rem;
     margin-left:auto;
+    overflow-x:hidden;
 }
 .line2{
     width: 40rem;
     height: 1rem;
     background-color: black;
-    margin-bottom:12rem;
-}
-.line3{
-    width: 50rem;
-    height: 1rem;
-    background-color: black;
-    margin-left:auto;
+    margin-bottom:3em;
 }

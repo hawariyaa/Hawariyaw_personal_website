@@ -10,8 +10,12 @@ function Footer({theme, setTheme}) {
          <i class="fa-brands fa-github"></i>
          <i class="fa-brands fa-linkedin"></i>
         </div>
-        <div className='links'>
-         
+        <div>
+                  <ul className={`nav-links ${theme}`}>
+                    <li><a href="#aboutme">About-me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>       
+                  </ul>
         </div>
         <p>Thank you for checking out!</p>
        <p className='legal'>© 2025 Hawariyaw Paulos. All rights reserved.</p>
