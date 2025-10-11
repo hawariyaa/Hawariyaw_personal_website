@@ -11,34 +11,56 @@ gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
 function Aboutme({ theme }) {
   const rightRef = useRef(null);
 
-  useGSAP(() => {
-    gsap.set('h1 span', { display: 'inline-block' });
-    const passageText = new SplitText('.passage', { type: 'lines' });
+  useGSAP(
+    () => {
+      document.fonts.ready.then(() => {
+        const ctx = gsap.context(() => {
+          const heading = rightRef.current.querySelector('h1');
+          const passage = rightRef.current.querySelector('.passage');
 
-    const playAnimation = () => {
-      gsap.fromTo(
-        'h1 span',
-        { y: -80, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.3, duration: 2, ease: 'power2.out' }
-      );
+          // Split text for animation
+          gsap.set(heading.querySelectorAll('span'), { display: 'inline-block' });
+          const passageText = new SplitText(passage, { type: 'lines' });
 
-      gsap.from(
-        passageText.lines,
-        { y: 30, opacity: 0, duration: 5, ease: 'power1.inOut', stagger: 0.5, delay: 0.5 }
-      );
-    };
+          const playAnimation = () => {
+            gsap.fromTo(
+              heading.querySelectorAll('span'),
+              { y: -80, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                stagger: 0.4,
+                duration: 2,
+                ease: 'power2.out',
+              }
+            );
 
-    const trigger = ScrollTrigger.create({
-      trigger: rightRef.current,
-      start: 'top 80%',
-      onEnter: playAnimation,
-      onEnterBack: playAnimation, // plays when you enter back
-    });
+            gsap.from(passageText.lines, {
+              y: 30,
+              opacity: 0,
+              duration: 2,
+              ease: 'power1.inOut',
+              stagger: 0.3,
+              delay: 0.5,
+            });
+          };
 
-    return () => trigger.kill();
-  }, { scope: rightRef });
+          // ScrollTrigger setup
+          ScrollTrigger.create({
+            trigger: rightRef.current,
+            start: 'top 80%',
+            onEnter: playAnimation,
+            onEnterBack: playAnimation,
+          });
+        }, rightRef);
 
-  // 🔁 Refresh when using navbar jumps
+        return () => ctx.revert(); // clean up
+      });
+    },
+    { scope: rightRef }
+  );
+
+  // Refresh ScrollTrigger when navigating via hash links
   useEffect(() => {
     const handleHashChange = () => {
       setTimeout(() => ScrollTrigger.refresh(), 100);
@@ -54,12 +76,14 @@ function Aboutme({ theme }) {
       </div>
 
       <div className="About-right" ref={rightRef}>
-        <h1>Ab<span>o</span>ut m<span>e</span></h1>
+        <h1>
+          Ab<span>o</span>ut m<span>e</span>
+        </h1>
         <p className="passage">
-          Hi, I’m Hawariyaw Paulos, a Computer Engineering graduate and an aspiring software developer
-          passionate about building efficient and user-focused websites. I enjoy solving real-world
-          problems through technology from designing interactive front-end interfaces with React to
-          developing reliable back-end systems using Express js and Mongo DB.
+          Hi, I’m Hawariyaw Paulos, a Computer Engineering graduate and an aspiring software
+          developer passionate about building efficient and user-focused websites. I enjoy solving
+          real-world problems through technology — from designing interactive front-end interfaces
+          with React to developing reliable back-end systems using Express.js and MongoDB.
         </p>
       </div>
     </div>

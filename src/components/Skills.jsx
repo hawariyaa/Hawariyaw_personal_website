@@ -14,6 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Skills({theme, setTheme}) {
   useGSAP(() => {
+  const width = window.innerWidth
+  if (width < 1300) return
   const t1 = gsap.timeline({
     scrollTrigger: {
       trigger: '.icons',  // element that triggers animation

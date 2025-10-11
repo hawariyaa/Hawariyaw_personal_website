@@ -1,6 +1,6 @@
 .contact-container{
     overflow-x:hidden;
-    padding: 80px;
+    padding: 5vw;
 }
 .contact-container.light{
     background-color:white;
@@ -19,27 +19,27 @@
     margin: 1em 0 1em 0;
 }
 .contact input{
-    width: 20em;
+    width:clamp(13em, 20vw,25em);
     padding:1em;
     border-radius: 5px;
 }
 .contact textarea{
-    width: 50em;
-    height: 20em;
+    width:clamp(20em, 50vw, 55em);
+    height:clamp(12em, 20vw, 25em);
     padding: 1em;
     border-radius: 5px;
 }
 .contact button{
-    width: 12vw;
-    padding:1vw;
-    margin:1vw;
+    width: clamp(10em, 12vw, 20em);
+    padding:clamp(1em, 1vw, 6em);
+    margin:1.3em 0;
     background-color:red;
     color:white;
     border-radius:8px;
     text-decoration:none;
     font-family: "Poppins", sans-serif;
     font-style:normal;
-    font-size:clamp(10px,1.2vw,3em);
+    font-size:clamp(14px,0.2vw,3em);
     cursor: pointer;
     transition: 1s;
 }

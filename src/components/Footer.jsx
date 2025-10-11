@@ -24,3 +24,8 @@ function Footer({theme, setTheme}) {
 }
 
 export default Footer
+
+
+
+
+          

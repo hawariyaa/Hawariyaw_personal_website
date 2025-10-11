@@ -43,3 +43,19 @@ skills.light{
     background-color: black;
     margin-bottom:3em;
 }
+@media (max-width: 1300px) {
+  .icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .skills h2{
+    padding:2em 4.6em;
+  }
+  .icons img {
+    width: 4rem;
+  }
+  .line1, .line2 {
+    display: none;
+  }
+}

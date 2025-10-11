@@ -2,15 +2,15 @@
     display:flex;
     gap: 3em;
     overflow-x:hidden;
-    height: 100vh;
+   
 }
 .About-container.dark{
     background-color: black;
     color: white;
 }
 .About-left img{
-    width: 25em;
-    margin-left:6em;
+    width: 28vw;
+    margin-left:9vw;
     border-radius:85px;
 }
 .About-right{
