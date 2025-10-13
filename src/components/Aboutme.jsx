@@ -6,71 +6,29 @@ import { SplitText } from 'gsap/all';
 import About from '../assets/About.jpg';
 import '../css/about.css';
 
-gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
+gsap.registerPlugin(ScrollTrigger,SplitText);
 
 function Aboutme({ theme }) {
   const rightRef = useRef(null);
-
-  useGSAP(
-    () => {
-      document.fonts.ready.then(() => {
-        const ctx = gsap.context(() => {
-          const heading = rightRef.current.querySelector('h1');
-          const passage = rightRef.current.querySelector('.passage');
-
-          // Split text for animation
-          gsap.set(heading.querySelectorAll('span'), { display: 'inline-block' });
-          const passageText = new SplitText(passage, { type: 'lines' });
-
-          const playAnimation = () => {
-            gsap.fromTo(
-              heading.querySelectorAll('span'),
-              { y: -80, opacity: 0 },
-              {
-                y: 0,
-                opacity: 1,
-                stagger: 0.4,
-                duration: 2,
-                ease: 'power2.out',
-              }
-            );
-
-            gsap.from(passageText.lines, {
-              y: 30,
-              opacity: 0,
-              duration: 2,
-              ease: 'power1.inOut',
-              stagger: 0.3,
-              delay: 0.5,
-            });
-          };
-
-          // ScrollTrigger setup
-          ScrollTrigger.create({
-            trigger: rightRef.current,
-            start: 'top 80%',
-            onEnter: playAnimation,
-            onEnterBack: playAnimation,
-          });
-        }, rightRef);
-
-        return () => ctx.revert(); // clean up
-      });
-    },
-    { scope: rightRef }
-  );
-
-  // Refresh ScrollTrigger when navigating via hash links
-  useEffect(() => {
-    const handleHashChange = () => {
-      setTimeout(() => ScrollTrigger.refresh(), 100);
-    };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+ 
+  useGSAP(() => {
+  const heroSplit = new SplitText('.passage', {type:'lines'});
+  gsap.from(heroSplit.lines, {
+    y: 60,
+    opacity: 0,
+    duration: 2,
+    stagger:0.25,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: rightRef.current,
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+}, { scope: rightRef });
 
   return (
-    <div className={`About-container ${theme}`} id="aboutme">
+    <div className={`About-container ${theme}`} id="aboutme" >
       <div className="About-left">
         <img src={About} alt="About" />
       </div>

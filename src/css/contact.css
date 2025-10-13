@@ -1,6 +1,6 @@
 .contact-container{
     overflow-x:hidden;
-    padding: 5vw;
+    padding: 7vw 5vw;
 }
 .contact-container.light{
     background-color:white;
@@ -24,7 +24,7 @@
     border-radius: 5px;
 }
 .contact textarea{
-    width:clamp(20em, 50vw, 55em);
+    width:clamp(17em, 50vw, 55em);
     height:clamp(12em, 20vw, 25em);
     padding: 1em;
     border-radius: 5px;

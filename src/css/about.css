@@ -2,22 +2,23 @@
     display:flex;
     gap: 3em;
     overflow-x:hidden;
-   
 }
 .About-container.dark{
     background-color: black;
     color: white;
 }
 .About-left img{
-    width: 28vw;
+    width: clamp(15em, 28vw, 40em);
     margin-left:9vw;
-    border-radius:85px;
+    border-radius:clamp(2em, 8vw, 3em);
+    margin-top:5em;
 }
 .About-right{
     margin-top: 7em;
 }
 .About-right h1{
     color:#ebdf09;
+    font-size:clamp(23px,2.6vw,3em);
 }
 .About-right p{
     font-family: "Poppins", sans-serif;
@@ -25,4 +26,15 @@
 .About-right h1 span{
     color:green;
 }
-
+@media(max-width:600px){
+    .About-container{
+    display:flex;
+    flex-direction:column;
+    gap: 1em;
+    overflow-x:hidden;
+}
+.About-right{
+    margin-top:0;
+    padding:2em;
+}
+}

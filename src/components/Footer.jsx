@@ -11,7 +11,7 @@ function Footer({theme, setTheme}) {
          <i class="fa-brands fa-linkedin"></i>
         </div>
         <div>
-                  <ul className={`nav-links ${theme}`}>
+                  <ul className={`nav-link ${theme}`}>
                     <li><a href="#aboutme">About-me</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>       
